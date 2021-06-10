@@ -1,0 +1,20 @@
+from domaintools import API
+
+user_name = "api_user"
+key = "api_key"
+
+try:
+    API = API(user_name, key)
+    Domain = API.domain_search('domain', exclude='photos')
+
+    for result in api.domain_search('domain', exclude='photos'):
+        print(result['sld'])
+
+    Domain = api.domain_profile('domain')
+    title = profile['website_data']['title']
+
+    print(Domain)
+    print(title)
+
+except Exception as e:
+    print(e)
